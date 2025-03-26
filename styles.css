@@ -152,7 +152,7 @@ menu {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   & a {
-    color: var(--accenture-dark-purple);
+    color: var(--accenture-purple);
   }
 }
 
@@ -439,12 +439,14 @@ footer {
 /*Marquee*/
 .marquee-text {
   overflow: clip;
+  margin: 2rem 0;
 }
 
 .marquee-text-track {
   display: flex;
+
   padding-left: 4.8rem;
-  gap: 4.8rem;
+  gap: 1rem;
   width: max-content;
   animation: marquee-move-text var(--speed, 100s) linear infinite
     var(--direction, forwards);
