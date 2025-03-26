@@ -5,3 +5,5 @@ faqs.forEach(faq => {
         faq.classList.toggle("active");
     })
 })
+
+
