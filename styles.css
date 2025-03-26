@@ -30,14 +30,18 @@ body {
   font-weight: 900;
   font: 10rem;
 }
+
 /* Navigation Styles */
 nav {
-  background-color: var(--accenture-purple);
+  background-color: black;
   color: var(--accenture-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+}
+.logo__png {
+  width: 12rem;
 }
 
 .btn {
@@ -72,10 +76,8 @@ nav {
   }
 }
 .logo {
-  color: var(--accenture-white);
-  font-size: 1.75rem;
-  font-weight: bold;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
