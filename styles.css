@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
+
   line-height: 1.6;
   color: var(--text-gray);
   height: 100%;
@@ -155,6 +156,11 @@ menu {
   }
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Mobile Navigation */
 @media (max-width: 768px) {
   nav {
@@ -266,7 +272,6 @@ menu {
   padding: 0rem 3rem;
   justify-content: center;
   gap: 2rem;
-  
 }
 
 .team-card {
