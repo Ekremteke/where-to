@@ -96,7 +96,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--accenture-black);
+  color: var(--accenture-purple);
 }
 menu {
   list-style: none;
