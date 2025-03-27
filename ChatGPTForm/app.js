@@ -1,3 +1,7 @@
+require('dotenv').config()
+
+
+
 document.getElementById("careerForm").addEventListener("submit", async function (event) {
     event.preventDefault();
     console.log('hello world')
@@ -20,7 +24,7 @@ document.getElementById("careerForm").addEventListener("submit", async function 
     Suggest the best career fields for them and explain why. keep it relatively short and sweet`;
 
 
-    const apiKey = process.env.apiKey;
+    const apiKey = process.env.API_KEY;
     const responseDiv = document.getElementById("response");
     responseDiv.style.display = "block";
     responseDiv.innerHTML = "<span>Generating career advice...</span>";
