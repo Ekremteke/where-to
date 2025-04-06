@@ -252,7 +252,7 @@ menu {
 
 /* Home Page Styles */
 .hero {
-  background-image: url("assets/images/background-2.JPG");
+  background-image: url("assets/images/background-2.jpg");
   color: var(--accenture-white);
   text-align: center;
   justify-content: center;
