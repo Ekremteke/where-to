@@ -82,7 +82,7 @@ app.post('/api/career-advice', async (req, res) => {
 });
 
 // Serve static files from the 'client' directory (the folder with your HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 // Fallback route to serve the index.html for any other routes (important for SPAs)
 app.get('*', (req, res) => {
