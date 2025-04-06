@@ -12,7 +12,7 @@ faqs.forEach(faq => {
 //     event.preventDefault();
 //     const formData = new FormData(this);
 
-//     const response = await fetch("http://localhost:5000/send-email", {
+//     const response = await fetch("https://where-to-social-impact-week.up.railway.app/send-email", {
 //         method: "POST",
 //         body: new URLSearchParams(formData),
 //         headers: {
@@ -42,7 +42,7 @@ document.getElementById("careerForm").addEventListener("submit", async function 
     responseDiv.innerHTML = "<span>Generating career advice...</span>";
 
     try {
-        const response = await fetch("http://localhost:5000/api/career-advice", {
+        const response = await fetch("https://where-to-social-impact-week.up.railway.app/api/career-advice", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
