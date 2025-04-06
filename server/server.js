@@ -4,6 +4,8 @@ const cors = require('cors');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
+
 
 const app = express();
 app.use(cors());
@@ -79,6 +81,14 @@ app.post('/api/career-advice', async (req, res) => {
     }
 });
 
+// Serve static files from the 'client' directory (the folder with your HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, 'client')));
 
+// Fallback route to serve the index.html for any other routes (important for SPAs)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'index.html'));
+});
+
+// Set the server to listen on the appropriate port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

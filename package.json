@@ -1,0 +1,6 @@
+{
+    "name": "where-to-website",
+    "scripts": {
+      "start": "cd server && npm install && node server.js"
+    }
+  }
