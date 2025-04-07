@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 
 const apiKey = process.env.API_KEY;
 
+
 // Nodemailer
 app.post('/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
@@ -24,7 +25,7 @@ app.post('/send-email', async (req, res) => {
         service: 'gmail', // or use SMTP settings for other providers
         auth: {
             user: process.env.EMAIL, // Your email
-            pass: process.env.EMAIL_PASSWORD, // Your email password or app password
+            pass: process.env.EMAIL_PASS, // Your email password or app password
         },
     });
 
