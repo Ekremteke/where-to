@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 const apiKey = process.env.API_KEY;
 
-Nodemailer
+// Nodemailer
 app.post('/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
 
