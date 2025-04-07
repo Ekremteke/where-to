@@ -8,26 +8,26 @@ faqs.forEach(faq => {
 
 
 
-// document.querySelector("form").addEventListener("submit", async function (event) {
-//     event.preventDefault();
-//     const formData = new FormData(this);
+document.querySelector("form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const formData = new FormData(this);
 
-//     const response = await fetch("https://where-to-social-impact-week.up.railway.app/send-email", {
-//         method: "POST",
-//         body: new URLSearchParams(formData),
-//         headers: {
-//             "Content-Type": "application/x-www-form-urlencoded",
-//         },
-//     });
+    const response = await fetch("https://where-to-social-impact-week.up.railway.app/send-email", {
+        method: "POST",
+        body: new URLSearchParams(formData),
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+    });
 
-//     const result = await response.json();
-//     if (result.success) {
-//         document.getElementById("success-message").style.display = "block";
-//         this.reset();
-//     } else {
-//         alert("Failed to send email. Please try again.");
-//     }
-// });
+    const result = await response.json();
+    if (result.success) {
+        document.getElementById("success-message").style.display = "block";
+        this.reset();
+    } else {
+        alert("Failed to send email. Please try again.");
+    }
+});
 
 
 document.getElementById("careerForm").addEventListener("submit", async function (event) {

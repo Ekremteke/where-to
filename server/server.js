@@ -15,34 +15,34 @@ app.use(bodyParser.json());
 
 const apiKey = process.env.API_KEY;
 
-// Nodemailer
-// app.post('/send-email', async (req, res) => {
-//     const { name, email, subject, message } = req.body;
+Nodemailer
+app.post('/send-email', async (req, res) => {
+    const { name, email, subject, message } = req.body;
 
-//     // Configure Nodemailer
-//     const transporter = nodemailer.createTransport({
-//         service: 'gmail', // or use SMTP settings for other providers
-//         auth: {
-//             user: process.env.EMAIL, // Your email
-//             pass: process.env.EMAIL_PASSWORD, // Your email password or app password
-//         },
-//     });
+    // Configure Nodemailer
+    const transporter = nodemailer.createTransport({
+        service: 'gmail', // or use SMTP settings for other providers
+        auth: {
+            user: process.env.EMAIL, // Your email
+            pass: process.env.EMAIL_PASSWORD, // Your email password or app password
+        },
+    });
 
-//     const mailOptions = {
-//         from: email,
-//         to: process.env.RECEIVER_EMAIL, // Your email to receive messages
-//         subject: subject,
-//         text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-//     };
+    const mailOptions = {
+        from: email,
+        to: process.env.RECEIVER_EMAIL, // Your email to receive messages
+        subject: subject,
+        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    };
 
-//     try {
-//         await transporter.sendMail(mailOptions);
-//         res.json({ success: true, message: 'Email sent successfully!' });
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).json({ success: false, message: 'Failed to send email' });
-//     }
-// });
+    try {
+        await transporter.sendMail(mailOptions);
+        res.json({ success: true, message: 'Email sent successfully!' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Failed to send email' });
+    }
+});
 
 // OpenAI API Handler
 app.post('/api/career-advice', async (req, res) => {
