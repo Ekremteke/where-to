@@ -30,7 +30,7 @@ app.post('/send-email', async (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: process.env.RECEIVER_EMAIL, // Your email to receive messages
+        to: process.env.EMAIL, // Your email to receive messages
         subject: subject,
         text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     };
